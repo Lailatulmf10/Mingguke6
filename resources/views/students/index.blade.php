@@ -21,12 +21,12 @@
                                 <input name="keyword" type="text" class="form-control" placeholder="Name">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary mb-3">Cari</button>
+                                <button type="submit" class="btn btn-primary mb-3">Search</button>
                             </div> 
                         </form>
                     </div>
 
-                    <a href="/students/create" class="btn btn-primary">Input Mahasiswa</a> 
+                    <a href="/students/create" class="btn btn-primary">Add Data</a> 
                     <br><br>
 
                     <table class="table table-responsive table-striped">
@@ -44,7 +44,7 @@
                             <tr>
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>
-                                <td>{{ $s->class }}</td> 
+                                <td>{{ $s->kelas->class_name }}</td>
                                 <td>{{ $s->department }}</td>
                                 <td>
                                 <form action="/students/{{$s->id}}" method="post"> 
